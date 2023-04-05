@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>F1 Teams</title>
+  </head>
+  <body>
+    <h1>F1 Teams</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Country</th>
+          <th>Engine</th>
+        </tr>
+      </thead>
+      <tbody>
+            <% teams.forEach(function(getF1Teams) { %>
+          <tr>
+            <td><%= team.id %></td>
+            <td><%= team.name %></td>
+            <td><%= team.country %></td>
+            <td><%= team.engine %></td>
+            <td>
+              <a href="/teams/<%= team.id %>/edit">Edit</a>
+              <form action="/teams/<%= team.id %>?_method=DELETE" method="POST" style="display: inline;">
+                <button type="submit">Delete</button>
+              </form>
+            </td>
+          </tr>
+        <% }); %> 
+      </tbody>
+    </table>
+    <h2>Create Team</h2>
+    <form action="/teams" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" name="name" required>
+      <label for="country">Country:</label>
+      <input type="text" name="country" required>
+      <label for="engine">Engine:</label>
+      <input type="text" name="engine" required>
+      <button type="submit">Create</button>
+    </form>
+  </body>
+</html>

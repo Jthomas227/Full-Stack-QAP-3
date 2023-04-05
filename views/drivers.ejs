@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Drivers</title>
+</head>
+<body>
+  <h1>Drivers</h1>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Driver ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Nationality</th>
+        <th>Team ID</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+ 
+    </tbody>
+  </table>
+
+  <form action="/drivers" method="POST">
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name"><br>
+
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="last_name" name="last_name"><br>
+
+    <label for="nationality">Nationality:</label>
+    <input type="text" id="nationality" name="nationality"><br>
+
+    <label for="team_id">Team ID:</label>
+    <input type="text" id="team_id" name="team_id"><br>
+
+    <button type="submit">Create Driver</button>
+  </form>
+</body>
+</html>
